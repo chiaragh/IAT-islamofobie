@@ -1,7 +1,24 @@
-define(['pipAPI','/implicit/common/all/js/pip/piscripts/iat/iat5.js'], function(APIConstructor, iatExtension){
-	var API = new APIConstructor();
-    var global = API.getGlobal();
-    
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
+    var API = new APIConstructor();
+var posWords = API.shuffle([
+            'Love', 'Cheer', 'Friend', 'Pleasure', 
+            'Adore', 'Cheerful', 'Friendship', 'Joyful', 
+            'Smiling','Cherish', 'Excellent', 'Glad', 
+            'Joyous', 'Spectacular', 'Appealing', 'Delight', 
+            'Excitement', 'Laughing', 'Attractive','Delightful', 
+            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful', 
+            'Fantastic', 'Happy', 'Lovely', 'Terrific', 
+            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
+  var negWords = API.shuffle([
+            'Abuse', 'Grief', 'Poison', 'Sadness', 
+            'Pain', 'Despise', 'Failure', 'Nasty', 
+            'Angry', 'Detest', 'Horrible', 'Negative', 
+            'Ugly', 'Dirty', 'Gross', 'Evil', 
+            'Rotten','Annoy', 'Disaster', 'Horrific',  
+            'Scorn', 'Awful', 'Disgust', 'Hate', 
+            'Humiliate', 'Selfish', 'Tragic', 'Bothersome', 
+            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
+	
     return iatExtension({
         category1 : {
             name : 'Arab Muslims', //Will appear in the data.
